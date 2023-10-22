@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'consulting-website';
-  imagePath = './assets/home-page-banner.jpg'
 }
