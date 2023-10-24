@@ -1,0 +1,14 @@
+@import '../../../../styles.scss';
+
+.container {
+    border-radius: 2rem;
+    background-color: $gray-700;
+}
+
+.img-cropper {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}

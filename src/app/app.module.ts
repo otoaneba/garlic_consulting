@@ -7,6 +7,7 @@ import { MenuComponent } from './view/child-views/menu/menu.component';
 import { HomePageComponent } from './view/parent-views/home-page/home-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './view/parent-views/about-us/about-us.component';
+import { AboutMeComponent } from './view/child-views/about-me/about-me.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AboutUsComponent } from './view/parent-views/about-us/about-us.componen
     AppComponent,
     MenuComponent,
     HomePageComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

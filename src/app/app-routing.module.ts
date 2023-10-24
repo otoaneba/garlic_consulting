@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, provideRouter, withComponentInputBinding } from '@angular/router';
 import { HomePageComponent } from './view/parent-views/home-page/home-page.component';
 import { AboutUsComponent } from './view/parent-views/about-us/about-us.component';
 
@@ -11,6 +11,9 @@ routes.push(
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    provideRouter(routes, withComponentInputBinding())  
+  ]
 })
 export class AppRoutingModule { }
