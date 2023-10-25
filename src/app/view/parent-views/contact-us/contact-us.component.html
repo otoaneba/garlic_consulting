@@ -1,0 +1,56 @@
+<div class="container m-5 pr-5">
+    <div  class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" 
+                        class="form-control"
+                        id="name"
+                        required
+                        [(ngModel)]="model.name"
+                        name="name">
+            </div>
+        </div>
+    </div>
+    <div  class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="text" 
+                        class="form-control"
+                        id="name"
+                        required
+                        [(ngModel)]="model.email"
+                        name="email">
+            </div>
+        </div>
+    </div>
+    <div  class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="Phone">Phone Number (optional)</label>
+                <input type="text" 
+                        class="form-control"
+                        id="name"
+                        required
+                        [(ngModel)]="model.name"
+                        name="phoneNumber">
+            </div>
+        </div>
+    </div>
+    <div  class="row">
+        <div class="col">
+            <label for="Message">Tell us what you need!</label>
+            <div class ="form-group">
+            <textarea
+                [(ngModel)]="model.message"
+                rows="8"
+                cols="75"
+                maxlength="100"
+                minlength="20"
+                required
+                >
+            </textarea>
+        </div>
+    </div>
+</div>
