@@ -1,3 +1,4 @@
+@use '@angular/material' as mat;
 @import '../../../../styles.scss';
 
 .container {
@@ -29,10 +30,10 @@
 
 .manifesto {
     padding: 2rem;
-    max-width: 75%;
+    max-width: 50%;
     background-color: $gray-800;
     border-radius: 1rem;
-    // text-align: center;
+    filter: drop-shadow(-20px 10px 1px #212121);
 }
 
 .prefix {

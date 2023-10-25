@@ -11,5 +11,6 @@ export class AboutMeComponent {
   @Input() public name: string;
   @Input() public imgSrc: string;
   @Input() public description: string;
+  @Input() public title: string;
   @Input() public link: string;
 }
