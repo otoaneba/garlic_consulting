@@ -1,56 +1,82 @@
-<div class="container m-5 pr-5">
-    <div  class="row">
-        <div class="col">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" 
-                        class="form-control"
-                        id="name"
-                        required
-                        [(ngModel)]="model.name"
-                        name="name">
-            </div>
-        </div>
+<!-- <div class="container">
+    <div class="form-group w-50">
+        <i class="fa fa-cloud"></i>
+        <label for="name">Name</label>
+        <input
+            type="text" 
+            class="form-control"
+            required minlength="3"
+            [(ngModel)]="model.name" 
+            #name="ngModel">
     </div>
-    <div  class="row">
-        <div class="col">
-            <div class="form-group">
-                <label for="Email">Email</label>
-                <input type="text" 
-                        class="form-control"
-                        id="name"
-                        required
-                        [(ngModel)]="model.email"
-                        name="email">
-            </div>
-        </div>
+    <ng-container class="text-danger" *ngIf="(name.invalid && (name.dirty || name.touched))">
+        <span class="text-danger" *ngIf="name.errors?.['required']">Name is required</span>
+        <span class="text-danger" *ngIf="name.errors?.['minlength']"> Name must be at least 3 characters long </span>
+    </ng-container>
+    <div class="form-group w-50">
+        <label for="Email">Email</label>
+        <input 
+            type="email" required
+            class="form-control"
+            name="email"
+            ngModel email
+            [(ngModel)]="model.email"
+            #email="ngModel">
     </div>
-    <div  class="row">
-        <div class="col">
-            <div class="form-group">
-                <label for="Phone">Phone Number (optional)</label>
-                <input type="text" 
-                        class="form-control"
-                        id="name"
-                        required
-                        [(ngModel)]="model.name"
-                        name="phoneNumber">
-            </div>
-        </div>
+    <ng-container class="text-danger" *ngIf="(email.invalid && (email.dirty || email.touched))">
+        <span class="text-danger" *ngIf="email.errors?.['required']">Email is required</span>
+        <span class="text-danger" *ngIf="email.invalid">Please use correct email format</span>
+    </ng-container>
+    <div class="form-group w-50">
+        <label for="Phone">Phone Number (optional)</label>
+        <input
+            type="text" 
+            class="form-control"
+            id="name"
+            [(ngModel)]="model.phoneNumber"
+            pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.]\d{3}[\s.]\d{4}$"
+            name="phoneNumber"
+            #phoneNumber="ngModel">
     </div>
-    <div  class="row">
-        <div class="col">
-            <label for="Message">Tell us what you need!</label>
-            <div class ="form-group">
+    <div class="d-flex">
+        <label class="w-50" for="Message">Tell us what you need! {{model.message?.length}}/{{250}}</label>
+        <label class="nopadding clrlbl">{{model.message?.length}}/{{250}}</label>
+        <div class ="form-group">
             <textarea
                 [(ngModel)]="model.message"
                 rows="8"
-                cols="75"
-                maxlength="100"
+                cols="100"
+                maxlength="250"
                 minlength="20"
                 required
+                #message="ngModel"
                 >
             </textarea>
+    </div>
+        <br>
+        <ng-container class="text-danger" *ngIf="(message.invalid && (email.dirty || message.touched))">
+            <span class="text-danger" *ngIf="message.errors?.['required']">Please give us some general idea on what you need</span>
+            <span class="text-danger" *ngIf="message.errors?.['maxlength']">Message is too long!</span>
+            <span class="text-danger" *ngIf="message.errors?.['minlength']">Message is too short!</span>
+        </ng-container>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="grid-even-header">
+        <div class="header">
+            <h1>Get in touch with us</h1>
+        </div>
+        <div class="header-sub">
+            <h4>Our business hours are 9:00-18:00 CET Monday-Friday and 9:00-17:00 CET on weekends.</h4>            
+        </div>
+    </div>
+    <div class="grid-even-colums pt-2">
+        <div class="flow">
+            <i class="fa fa-regular fa-envelope"></i>
+        </div>
+        <div class="flow">
+            <i class="fa fa-solid fa-phone fa-xl"></i>
         </div>
     </div>
 </div>
