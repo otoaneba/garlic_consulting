@@ -18,6 +18,38 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-even-columns-article {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.article {
+    padding: 1rem;
+    background-color: $gray-700;
+    border-radius: 0.5rem;
+    filter: drop-shadow(-10px 10px 1px #212121);
+    text-align: center;
+    &-header {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    &-icon {
+        font-size: 4rem;
+    }
+    &-description {
+        font-weight: lighter
+    }
+    &-link {
+        text-decoration: none;
+    }
+}
+
+a:hover {
+    i {
+        transform: translateX(0.5rem);
+        transition: 0.3s;
+    }
+}
 
 
 .header {
@@ -28,33 +60,13 @@
     }
 }
 
+h4 {
+    font-weight: lighter;
+}
+
 .icon {
     color: #ffffff;
     size: 1rem;
     font-size: 4rem;
     box-shadow: 1rem;
 }
-
-
-.flow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
-    transition: color 2s ease-out 100ms;
-    :hover {
-        transform: scale(1.2);
-        transition: 0.5s;
-    }
-}
-
-.details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &-phone {
-        text-align: center;
-        grid-template-rows: repeat(1, 1fr);
-    }
-}
-
