@@ -7,41 +7,52 @@
 .grid-even-header {
     text-align: center;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 2rem;
 }
 
-.grid-even-columns {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-}
-
 .grid-even-columns-article {
     display: grid;
-    gap: 1.25rem;
+    gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .article {
     padding: 1rem;
-    background-color: $gray-700;
+    background-color: #f5efeb;
     border-radius: 0.5rem;
-    filter: drop-shadow(-10px 10px 1px #212121);
+    filter: drop-shadow(-3px 4px 1px #a09f9f);
     text-align: center;
     &-header {
         font-family: 'Times New Roman', Times, serif;
     }
     &-icon {
         font-size: 4rem;
+        color: $gray-600;
     }
     &-description {
-        font-weight: lighter
+        font-weight: lighter;
+        color: $gray-600;
     }
     &-link {
         text-decoration: none;
     }
+}
+
+.span {
+    &-bland {
+        // font-family: Helvetica;
+        font-family: 'Public Pixel', sans-serif;
+        font-size: 2.5rem;
+        // font-family: 'VT323', monospace;
+        // font-size: 100px;
+        // display: inline-block;
+        color: $gray-400;
+    }
+    // &-grand {
+        
+    // }
 }
 
 a:hover {
@@ -51,9 +62,13 @@ a:hover {
     }
 }
 
-
 .header {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'EB Garamound', Times, serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #212121;
+    box-shadow: inset;
     &-sub {
         color: $gray-600;
         width: 100%;
@@ -65,8 +80,210 @@ h4 {
 }
 
 .icon {
-    color: #ffffff;
+    color: $gray-500;
     size: 1rem;
     font-size: 4rem;
     box-shadow: 1rem;
 }
+.invisible {
+    color: alpha($color: #ffffff00);
+}
+
+// $root: '.c-rainbow';
+
+// :root {
+//  --color-background: #31037D;
+ 
+//  --axis-x: 1px;
+//  --axis-y: 1rem;
+//  --delay: 10;
+ 
+//  --color-black: #000;
+//  --color-white: #fff;
+//  --color-orange: #D49C3D;
+//  --color-red: #D14B3D;
+//  --color-violet: #CF52EB;
+//  --color-blue: #44A3F7;
+//  --color-green: #5ACB3C;
+//  --color-yellow: #DEBF40;
+ 
+//  --color-foreground: var(--color-white);
+//  --font-name: Righteous;
+// }
+
+// #{$root} {
+//     counter-reset: rainbow;
+//     position: relative;
+//     display: block;
+    
+//     list-style: none;
+    
+//     padding: 0;
+//     margin: 0;
+    
+//     &__layer {
+//      --text-color: var(--color-foreground);
+//      counter-increment: rainbow; 
+//      font-size: 3rem;
+//      color: var(--text-color);
+   
+//      text-shadow:
+//       -1px -1px 0 var(--color-black),  
+//        1px -1px 0 var(--color-black),
+//        -1px 1px 0 var(--color-black),
+//         1px 1px 0 var(--color-black),
+      
+//         4px 4px 0 rgba(0, 0, 0, .2);
+     
+//      animation: rainbow 1.5s ease-in-out infinite;
+     
+//      @for $i from 1 through 7 {
+//       &:nth-child(#{$i}) {
+//        animation-delay: calc( #{$i} / var(--delay) * 1s);
+//        left: calc(var(--axis-x) * #{$i});
+//        z-index: -#{$i * 10};
+//       }
+//      }
+     
+//      &:not(:first-child) {
+//       position: absolute;
+//       top: 0;
+//      }
+   
+//      &--white  { --text-color: var(--color-white)}
+//      &--orange { --text-color: var(--color-orange)}
+//      &--red    { --text-color: var(--color-red)}
+//      &--violet { --text-color: var(--color-violet)}
+//      &--blue   { --text-color: var(--color-blue)}
+//      &--green  { --text-color: var(--color-green)}
+//      &--yellow { --text-color: var(--color-yellow)}
+//     }
+//    }
+   
+//    @keyframes rainbow {
+//     0%, 100% {
+//      transform: translatey(var(--axis-y)); 
+//     }
+//     50% {
+//      transform: translatey(calc(var(--axis-y) * -1));
+//     }
+//    } 
+
+//    /* latin-ext */
+// @font-face {
+//     font-family: 'Righteous';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url(https://fonts.gstatic.com/s/righteous/v17/1cXxaUPXBpj2rGoU7C9WhnGFq8Kk1doH.woff2) format('woff2');
+//     unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+//   }
+//   /* latin */
+//   @font-face {
+//     font-family: 'Righteous';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url(https://fonts.gstatic.com/s/righteous/v17/1cXxaUPXBpj2rGoU7C9WiHGFq8Kk1Q.woff2) format('woff2');
+//     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+//   }
+
+.span-grand {
+    // position: absolute;
+    top: 20%;
+    left: 60%;
+    transform: translate(0, 0);
+    font-size: 4rem;
+    color: $light;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    font-family: "Righteous", cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  @for $i from 1 through 4 { 
+    .span-grand:nth-of-type(#{$i}) {
+      animation-duration: 2s;
+      animation-delay: 0.8s - ($i / 4);
+      @if $i == 2 {
+        color:#d12424;
+      } @else if $i == 3 {
+        color:#0a6214;
+      } @else if $i == 4 {
+        color:#ff9100;
+      }
+    }
+  }
+  
+  @keyframes wave {
+    40%,
+    50% {
+      transform: translate(-50%, -65%) scale(1.05);
+    }
+  
+    0%,
+    90%,
+    100% {
+      transform: translate(-50%, -45%) scale(0.95);
+    }
+  }
+
+  @mixin zebra-shadow($size, $colors) {
+    $text-shadow: ();
+    @for $i from 1 through length($colors) {
+      @for $j from 0 through $size {
+        $pos: (($i - 1) * $size + $j) * 1px;
+        $text-shadow: append(
+          $text-shadow,
+          $pos $pos nth($colors, $i),
+          'comma'
+        );
+      }
+    }
+    text-shadow: $text-shadow;
+  }
+  
+  .h1-grand {
+    font-family: "Righteous", cursive;
+    color: #d9d9d9;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-size: 4rem;
+    animation:
+      text-shadow 1s linear infinite;
+  }
+  
+  @keyframes text-shadow {
+    $red: #F40000;
+    $green: #045f3b;
+    $yellow: #FFBA00;
+    $pink: #522463;
+  
+    from, 24.9% {
+      @include zebra-shadow(4, (
+        $pink, $yellow, $red, $green,
+        $pink, $yellow, $red, $green
+      ));
+    }
+  
+    25%, 49.9% {
+      @include zebra-shadow(4,  (
+        $green, $pink, $yellow, $red,
+        $green, $pink, $yellow, $red
+      ));
+    }
+  
+    50%, 74.9% {
+      @include zebra-shadow(4, (
+        $red, $green, $pink, $yellow,
+        $red, $green, $pink, $yellow
+      ));
+    }
+  
+    75%, to {
+      @include zebra-shadow(4, (
+        $yellow, $red, $green, $pink,
+        $yellow, $red, $green, $pink,
+      ));
+    }
+  }
