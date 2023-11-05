@@ -9,10 +9,6 @@ import { Contact } from './contact-form';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent {
-  public model = new Contact("G", "test@test.com", "hello", "6785550000")
-  public form: FormGroup = this.formBuilder.group({
-    firstName: [null],
-    interests: [null]
-  });
+
   constructor(private formBuilder: FormBuilder) {}
 }
