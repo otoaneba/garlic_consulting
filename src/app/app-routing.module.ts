@@ -6,7 +6,7 @@ import { ContactUsComponent } from './view/parent-views/contact-us/contact-us.co
 
 const routes: Routes = [];
 routes.push(
-  {path: '', component: HomePageComponent},
+  {path: 'spice-it-global', component: HomePageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact', component: ContactUsComponent}
 )
