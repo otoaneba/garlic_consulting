@@ -1,0 +1,218 @@
+@import '../../../../styles.scss';
+
+.container {
+    color: $gray-800;
+}
+
+.grid-even-header {
+    // padding-top: vh50;
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 2rem;
+}
+
+.header {
+    margin: 0;
+    padding-top: 5%;
+    // font-family: 'EB Garamound', Times, serif;
+    font-family: 'tiempos,Georgia,Cambria,Palatino,"Times New Roman",Times,serif';
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #212121;
+    box-shadow: inset;
+    &-sub {
+        color: $gray-600;
+        width: 100%;
+    }
+    &-tagline {
+        font-size: var(--font-size-xl);
+        font-weight: 500;
+        margin: 0;
+        padding-bottom: 0;
+    }
+    &-description {
+        font-size: 1.25rem;
+        width: 35rem;
+    }
+}
+
+.h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: lighter;
+}
+
+.testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+.grid-even-columns-article {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.article {
+    padding: 1rem;
+    background-color: #f5efeb;
+    border-radius: 0.5rem;
+    filter: drop-shadow(-3px 4px 1px #a09f9f);
+    text-align: center;
+    &-header {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    &-icon {
+        font-size: 4rem;
+        color: $gray-600;
+    }
+    &-description {
+        font-weight: lighter;
+        color: $gray-600;
+    }
+    &-link {
+        text-decoration: none;
+    }
+}
+
+.span {
+    &-bland {
+        font-family: 'Public Pixel', sans-serif;
+        font-size: 3rem;
+        color: $gray-400;
+    }
+}
+
+a:hover {
+    i {
+        transform: translateX(0.5rem);
+        transition: 0.3s;
+    }
+}
+
+.icon {
+    color: $gray-500;
+    size: 1rem;
+    font-size: 4rem;
+    box-shadow: 1rem;
+}
+.invisible {
+    color: alpha($color: #ffffff00);
+}
+
+.span-grand {
+    // position: absolute;
+    top: 20%;
+    left: 60%;
+    transform: translate(0, 0);
+    font-size: 4rem;
+    color: $light;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    font-family: "Righteous", cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  @for $i from 1 through 4 { 
+    .span-grand:nth-of-type(#{$i}) {
+      animation-duration: 2s;
+      animation-delay: 0.8s - ($i / 4);
+      @if $i == 2 {
+        color:#d12424;
+      } @else if $i == 3 {
+        color:#0a6214;
+      } @else if $i == 4 {
+        color:#ff9100;
+      }
+    }
+  }
+  
+  @keyframes wave {
+    40%,
+    50% {
+      transform: translate(-50%, -65%) scale(1.05);
+    }
+  
+    0%,
+    90%,
+    100% {
+      transform: translate(-50%, -45%) scale(0.95);
+    }
+  }
+
+  @mixin zebra-shadow($size, $colors) {
+    $text-shadow: ();
+    @for $i from 1 through length($colors) {
+      @for $j from 0 through $size {
+        $pos: (($i - 1) * $size + $j) * 1px;
+        $text-shadow: append(
+          $text-shadow,
+          $pos $pos nth($colors, $i),
+          'comma'
+        );
+      }
+    }
+    text-shadow: $text-shadow;
+  }
+  
+  .h1-grand {
+    font-family: "Righteous", cursive;
+    color: #d9d9d9;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-size: 4rem;
+    animation:
+      text-shadow 1s linear infinite;
+  }
+  
+  @keyframes text-shadow {
+    $red: #F40000;
+    $green: #045f3b;
+    $yellow: #FFBA00;
+    $pink: #522463;
+  
+    from, 24.9% {
+      @include zebra-shadow(4, (
+        $pink, $yellow, $red, $green,
+        $pink, $yellow, $red, $green
+      ));
+    }
+  
+    25%, 49.9% {
+      @include zebra-shadow(4,  (
+        $green, $pink, $yellow, $red,
+        $green, $pink, $yellow, $red
+      ));
+    }
+  
+    50%, 74.9% {
+      @include zebra-shadow(4, (
+        $red, $green, $pink, $yellow,
+        $red, $green, $pink, $yellow
+      ));
+    }
+  
+    75%, to {
+      @include zebra-shadow(4, (
+        $yellow, $red, $green, $pink,
+        $yellow, $red, $green, $pink,
+      ));
+    }
+  }
