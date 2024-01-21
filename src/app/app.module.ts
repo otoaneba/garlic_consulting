@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './view/parent-views/about-us/about-us.component';
 import { AboutMeComponent } from './view/child-views/about-me/about-me.component';
 import { ContactUsComponent } from './view/parent-views/contact-us/contact-us.component';
+import { OurServicesComponent } from './view/parent-views/our-services/our-services.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ContactUsComponent } from './view/parent-views/contact-us/contact-us.co
     HomePageComponent,
     AboutUsComponent,
     AboutMeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    OurServicesComponent
   ],
   imports: [
     BrowserModule,

@@ -3,12 +3,15 @@ import { RouterModule, Routes, provideRouter, withComponentInputBinding } from '
 import { HomePageComponent } from './view/parent-views/home-page/home-page.component';
 import { AboutUsComponent } from './view/parent-views/about-us/about-us.component';
 import { ContactUsComponent } from './view/parent-views/contact-us/contact-us.component';
+import { OurServicesComponent } from './view/parent-views/our-services/our-services.component';
 
 const routes: Routes = [];
 routes.push(
   {path: 'spice-it-global', component: HomePageComponent},
   {path: 'about-us', component: AboutUsComponent},
-  {path: 'contact', component: ContactUsComponent}
+  {path: 'contact', component: ContactUsComponent},
+  {path: 'services', component: OurServicesComponent},
+
 )
 
 @NgModule({

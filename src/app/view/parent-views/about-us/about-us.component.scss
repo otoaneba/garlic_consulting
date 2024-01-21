@@ -9,6 +9,42 @@
     background-color: $dark;
 }
 
+.grid-even-header {
+    // padding-top: vh50;
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 2rem;
+}
+
+.header {
+    margin: 0;
+    padding-top: 5%;
+    // font-family: 'EB Garamound', Times, serif;
+    font-family: 'tiempos,Georgia,Cambria,Palatino,"Times New Roman",Times,serif';
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #212121;
+    box-shadow: inset;
+    &-sub {
+        color: $gray-600;
+        width: 100%;
+    }
+    &-tagline {
+        font-size: var(--font-size-xl);
+        font-weight: 500;
+        margin: 0;
+        padding-bottom: 0;
+    }
+    &-description {
+        font-size: 1.25rem;
+        width: 35rem;
+    }
+}
+
 .img {
     display: block;
     max-width: 80%;
