@@ -11,6 +11,7 @@ import { AboutUsComponent } from './view/parent-views/about-us/about-us.componen
 import { AboutMeComponent } from './view/child-views/about-me/about-me.component';
 import { ContactUsComponent } from './view/parent-views/contact-us/contact-us.component';
 import { OurServicesComponent } from './view/parent-views/our-services/our-services.component';
+import { FooterComponent } from './view/parent-views/footer/footer.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { OurServicesComponent } from './view/parent-views/our-services/our-servi
     AboutUsComponent,
     AboutMeComponent,
     ContactUsComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
