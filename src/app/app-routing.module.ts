@@ -7,7 +7,7 @@ import { OurServicesComponent } from './view/parent-views/our-services/our-servi
 
 const routes: Routes = [];
 routes.push(
-  {path: 'spice-it-global', component: HomePageComponent},
+  {path: '', component: HomePageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact', component: ContactUsComponent},
   {path: 'services', component: OurServicesComponent},
